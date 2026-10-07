@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -8,7 +9,7 @@
 :root{--red:#ee1515;--ink:#17203a;--muted:#5b6478;--bg:#f7f8fc;--card:#ffffff;--dark:#101828}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:linear-gradient(rgba(247,248,252,.88),rgba(247,248,252,.93)),url('pokegpt-bg.jpg') center center/cover no-repeat fixed,var(--bg);line-height:1.6}
 a{text-decoration:none;color:inherit}
 .nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(12px);background:rgba(247,248,252,.85);border-bottom:1px solid #e8eaf1}
 .nav-inner{max-width:1080px;margin:0 auto;padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
@@ -62,7 +63,7 @@ footer{border-top:1px solid #e8eaf1;padding:2rem 1.5rem;text-align:center;color:
 footer .ball{width:20px;height:20px;display:inline-block;vertical-align:-4px;margin-right:.4rem;border-width:2px}
 footer .ball::after{border-width:2px}
 @media(max-width:640px){.nav-links{display:none}}
-</style>
+body{cursor:url('pokeball-cursor.png'),auto}a,button{cursor:url('pokeball-cursor.png'),pointer} </style>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner">
