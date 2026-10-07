@@ -63,7 +63,7 @@ footer{border-top:1px solid #e8eaf1;padding:2rem 1.5rem;text-align:center;color:
 footer .ball{width:20px;height:20px;display:inline-block;vertical-align:-4px;margin-right:.4rem;border-width:2px}
 footer .ball::after{border-width:2px}
 @media(max-width:640px){.nav-links{display:none}}
-body{cursor:url('pokeball-cursor.png'),auto}a,button{cursor:url('pokeball-cursor.png'),pointer} </style>
+body{cursor:url('pokeball-cursor.png'),auto}a,button{cursor:url('pokeball-cursor.png'),pointer} .click-fx{position:fixed;width:0;height:0;pointer-events:none;z-index:9999} .click-fx .fx-ball{position:absolute;left:-16px;top:-16px;width:32px;height:32px;animation:fxpop .55s cubic-bezier(.2,1.6,.4,1) forwards} .click-fx .fx-ring{position:absolute;left:-17px;top:-17px;width:34px;height:34px;border:3px solid #ee1515;border-radius:50%;animation:fxring .55s ease-out forwards} @keyframes fxpop{0%{transform:scale(0) rotate(-40deg);opacity:1}55%{transform:scale(1.2) rotate(12deg);opacity:1}100%{transform:scale(1) rotate(0deg);opacity:0}} @keyframes fxring{0%{transform:scale(.4);opacity:.9}100%{transform:scale(2.6);opacity:0}} </style>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner">
@@ -111,5 +111,5 @@ body{cursor:url('pokeball-cursor.png'),auto}a,button{cursor:url('pokeball-cursor
 <a class="btn btn-primary" href="#">预约提醒我</a>
 </section>
 <footer id="about"><span class="ball"></span>© 2026 PokeGPT · pokegpt.duckdns.org · 孵化中</footer>
-</body>
+<script> document.addEventListener('pointerdown',function(e){var f=document.createElement('div');f.className='click-fx';f.style.left=e.clientX+'px';f.style.top=e.clientY+'px';f.innerHTML='<div class="ball fx-ball"></div><div class="fx-ring"></div>';document.body.appendChild(f);setTimeout(function(){f.remove()},650);}); </script> </body>
 </html>
